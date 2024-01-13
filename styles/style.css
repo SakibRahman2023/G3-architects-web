@@ -132,6 +132,81 @@ main {
     padding-bottom: 32px;
 }
 
+.s-card {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.card {
+    border-radius: 8px;
+    border: 1px solid #FF900E;
+
+
+}
+
+.s-statis {
+    color: #424242;
+    font-size: 2.8rem;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.img-text {
+    color: #727272;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.s-img {
+    padding: 50px 100px 0px 100px;
+}
+
+.s-title {
+    color: #131313;
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 0px;
+}
+
+.s-text {
+    color: #727272;
+    font-size: 1rem;
+    font-weight: 400;
+    max-width: 550px;
+    margin-bottom: 100px;
+    margin-top: 0px;
+}
+
+.our {
+    color: #131313;
+    font-size: 2.8rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.there {
+    color: #727272;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.sponspors-img {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sponspors-img img {
+    width: 165px;
+    height: 50px;
+}
+
+
 
 /*responsive style*/
 
@@ -141,11 +216,14 @@ main {
     }
 
     nav,
-    .team-section {
+    .team-section,
+    .s-card,
+    .sponspors-img {
         flex-direction: column;
     }
 
-    .team-img {
+    .team-img,
+    .sponspors-img {
         grid-template-columns: repeat(1, 1fr);
     }
 
@@ -153,20 +231,47 @@ main {
         width: auto;
     }
 
-    .team-title {
+    .team-title,
+    .s-card {
         padding-right: 20px;
         padding-left: 20px;
     }
 
-    @media screen and (min-width:576.01px) and (max-width:992px) {
-        header {
-            padding: 20px;
-        }
-
-        nav,
-        .team-section {
-            flex-direction: column;
-            gap: 20px;
-        }
-
+    .s-card {
+        gap: 20px;
     }
+
+    .our {
+        font-size: 1.8rem;
+    }
+
+    .sponspors-img {
+        gap: 20px;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width:576.01px) and (max-width:992px) {
+    header {
+        padding: 20px;
+    }
+
+    nav,
+    .team-section {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .s-card {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-row-gap: 20px;
+        grid-column-gap: 20px;
+    }
+
+    .sponspors-img {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+}
